@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Password Generator</h1>
+
+    <section class="card">
+      <div class="row">
+        <label for="length">Length: <span id="lengthVal">16</span></label>
+        <input id="length" type="range" min="4" max="64" value="16" />
+      </div>
+
+      <div class="options">
+        <label><input id="lowercase" type="checkbox" checked /> Lowercase (a-z)</label>
+        <label><input id="uppercase" type="checkbox" checked /> Uppercase (A-Z)</label>
+        <label><input id="numbers" type="checkbox" checked /> Numbers (0-9)</label>
+        <label><input id="symbols" type="checkbox" checked /> Symbols (!@#...)</label>
+        <label><input id="avoidAmbiguous" type="checkbox" /> Avoid ambiguous (0OIl)</label>
+      </div>
+
+      <div class="actions">
+        <button id="generate">Generate</button>
+        <button id="copy" title="Copy password">Copy</button>
+        <button id="download" title="Download as txt">Download</button>
+      </div>
+
+      <div class="output">
+        <input id="passwordOutput" readonly />
+        <button id="toggleShow" class="small">Show</button>
+      </div>
+
+      <div class="strength">
+        <div id="strengthBar" class="bar"></div>
+        <div id="strengthText" class="label">Strength: —</div>
+      </div>
+
+      <div class="history card-small">
+        <h3>History</h3>
+        <ul id="historyList"></ul>
+        <button id="clearHistory" class="small">Clear</button>
+      </div>
+    </section>
+
+    <footer>
+      <small>Local-only generator • Never send your passwords to the internet</small>
+    </footer>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
