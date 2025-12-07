@@ -123,7 +123,7 @@ button.small{
     padding:0
 }
 .history ul{
-    max-height:140px;
+    max-height:139px;
     overflow:auto;
     padding-left:18px;
 }
